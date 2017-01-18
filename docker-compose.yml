@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+    contao:
+        container_name: contao
+        image: priorist/contao
+        build: .
+        volumes:
+            - contao:/var/www/html
+        ports:
+            - 80:80
+        networks:
+            - default
+        cap_drop:
+            - ALL
+        cap_add:
+            - SETGID
+            - SETUID
+            - DAC_OVERRIDE
+            - CHOWN
+            - NET_BIND_SERVICE
+        restart: always
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "1m"
+                max-file: "1"
+        labels:
+            com.priorist.description: "Contao base installation using Apache and PHP"
+
+
+volumes:
+    contao: {}
