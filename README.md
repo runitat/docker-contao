@@ -4,11 +4,11 @@
 
 Build with
 
-    $ sudo docker build -t priorist/contao .
+    $ sudo docker build -t runitdev/contao .
 
 or pull straight from the hub
 
-    $ sudo docker pull priorist/contao
+    $ sudo docker pull runitdev/contao
 
 ## Run
 
