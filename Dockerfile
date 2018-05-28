@@ -11,3 +11,7 @@ RUN apt-get update && \
     a2enmod rewrite && \
     apt-get remove -y jq wget zip g++ && \
     rm -rf /var/lib/apt/lists/*
+
+VOLUME /var/www/html
+EXPOSE 80
+
