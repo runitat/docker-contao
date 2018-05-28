@@ -8,6 +8,6 @@ RUN apt-get update && \
     /bin/bash -c "shopt -s dotglob && mv contao-*/* . && chown -R www-data:www-data *" && \
     rm -r contao-* && \
     mv .htaccess.default .htaccess && \
-	a2enmod rewrite && \
-    apt-get remove -y wget zip g++ && \
+    a2enmod rewrite && \
+    apt-get remove -y jq wget zip g++ && \
     rm -rf /var/lib/apt/lists/*
